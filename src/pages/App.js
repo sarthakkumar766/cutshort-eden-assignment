@@ -75,10 +75,13 @@ const App = () => {
   return (
     <>
       <div className="main-container">
-        <StaticTitle />
-        <Stepper step={step} totalLength={totalLength} />
-
-        {stepRenderer(step, nextStep, handleFormData, formData)}
+        <div className="header-container">
+          <StaticTitle />
+          <Stepper step={step} totalLength={totalLength} />
+        </div>
+        <div className="data-container">
+          {stepRenderer(step, nextStep, handleFormData, formData)}
+        </div>
       </div>
     </>
   );
